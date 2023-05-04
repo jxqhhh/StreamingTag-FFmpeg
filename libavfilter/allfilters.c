@@ -488,6 +488,7 @@ extern const AVFilter ff_vf_yaepblur;
 extern const AVFilter ff_vf_zmq;
 extern const AVFilter ff_vf_zoompan;
 extern const AVFilter ff_vf_zscale;
+extern const AVFilter ff_vf_watermark;
 
 extern const AVFilter ff_vsrc_allrgb;
 extern const AVFilter ff_vsrc_allyuv;

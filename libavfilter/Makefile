@@ -5,6 +5,7 @@ HEADERS = avfilter.h                                                    \
           buffersink.h                                                  \
           buffersrc.h                                                   \
           version.h                                                     \
+          RngStream.h
 
 OBJS = allfilters.o                                                     \
        audio.o                                                          \
@@ -20,6 +21,7 @@ OBJS = allfilters.o                                                     \
        graphdump.o                                                      \
        graphparser.o                                                    \
        video.o                                                          \
+       RngStream.o
 
 OBJS-$(HAVE_THREADS)                         += pthread.o
 
@@ -537,6 +539,9 @@ OBJS-$(CONFIG_TESTSRC2_FILTER)               += vsrc_testsrc.o
 OBJS-$(CONFIG_YUVTESTSRC_FILTER)             += vsrc_testsrc.o
 
 OBJS-$(CONFIG_NULLSINK_FILTER)               += vsink_nullsink.o
+
+OBJS-$(CONFIG_WATERMARK_FILTER)              += vf_watermark.o
+OBJS-$(CONFIG_WATERMARK_FILTER)              += RngStream.o
 
 # multimedia filters
 OBJS-$(CONFIG_ABITSCOPE_FILTER)              += avf_abitscope.o
